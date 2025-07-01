@@ -1,0 +1,50 @@
+.gam-profile-pop-up {
+	.gam-pop-content {
+		position: relative;
+	}
+
+	.gam-pop-img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 0;
+
+		img {
+			width: 170px;
+			height: auto;
+		}
+	}
+
+	.gam-pop-title {
+		font-size: 34px;
+		line-height: 1.1;
+		font-weight: 500;
+		margin: 105px 0 20px;
+		position: relative;
+		text-align: center;
+	}
+
+	.gam-pop-description {
+		margin-bottom: 40px;
+		font-size: 20px;
+		padding: 0 30px;
+		line-height: 1.2;
+		text-align: center;
+	}
+
+	.gam-pop-link-rect {
+		// background: transparent;
+		// text-transform: uppercase;
+		// border: 0.5px solid #000;
+		// height: 60px;
+		// min-width: 300px;
+		// padding: 5px 10px;
+		// display: flex;
+		// justify-content: center;
+		// margin: 0 auto 40px;
+		// align-items: center;
+		// font-size: 16px;
+		// font-weight: 500;
+	}
+}

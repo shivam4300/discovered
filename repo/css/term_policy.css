@@ -1,0 +1,164 @@
+/* policies page css start */
+.dis_policies_mainwrapper{
+    width: 100%;
+    float: left;
+    padding: 20px 0 20px 0;
+    }
+    .dis_policies_wrapper{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    }
+    .policies_heading {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-top: 40px;
+    font-weight: 600;
+    }
+    .policies_heading.sub_heading {
+    margin-top: 10px;
+    }
+    .policies_content_box p {
+    line-height: 1.5;
+    color: #777;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    word-break: break-word;
+    }
+    .policies_content_box .au_heading {
+    margin-bottom: 20px;
+    }
+    .policies_content_box .policies_datalist {
+    margin-bottom: 20px;
+    } 
+    .policies_content_box .policies_datalist li {
+    margin-bottom: 10px;
+    font-family: 'Muli', sans-serif;
+    }
+    .policies_content_box .policies_datalist.content_list li span {
+    font-weight: 500;
+    }
+    .dis_policies_mainwrapper .policies_link {
+    color: #ec5720;
+    }
+    .dis_policies_mainwrapper .policies_address {
+    font-family: 'Muli', sans-serif;
+    }
+    /* */
+.dis_policies_sidebar .policies_sidebarbox {
+    background: #f7f7f7;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    
+    }
+    .dis_policies_sidebar .policies_sidebarbox ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+    .dis_policies_sidebar .policies_sidebarbox ul li {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 1px;
+    padding-left: 25px;
+    border-bottom: 1px solid #00000017;
+    }
+    .dis_policies_sidebar .policies_sidebarbox ul li:last-child {
+    border-bottom: none;
+    }
+    .dis_policies_sidebar .policies_sidebarbox .nav-tabs > li > a {
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #40404c;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-family: 'Muli', sans-serif;
+    text-indent: -28px;
+    margin-left: 28px;
+    }
+    
+    .dis_policies_sidebar .policies_sidebarbox ul li a.active {
+    color: #eb581f;
+    }
+    .dis_policies_sidebar .policies_sidebarbox ul li a:hover {
+    color: #eb581f;
+    }
+    /*  */
+    .dis_policies_wrapper .nav-tabs {
+    float: left;
+    display: inline-block;
+    border-right: 2px solid #eaeaea;
+    border-bottom: none;
+    width:280px;
+    background: #f7f7f7;
+    }
+    .dis_policies_wrapper .tab-content {
+    float: right;
+    width: calc(100% - 280px);
+    padding: 25px 25px;
+    height: 933px;
+    overflow: auto;
+    }
+    
+    .dis_policies_wrapper .nav-tabs > li {
+    float: none;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 1px;
+    padding-left: 25px;
+    border-bottom: 1px solid #00000017;
+    }
+    .dis_policies_wrapper .nav-tabs > li:last-child {
+    border-bottom: 0;
+    }
+    .dis_policies_wrapper .dis_policies_wrapper .nav-tabs > li {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #00000017;
+    }
+    .dis_policies_wrapper  .nav-tabs > li > a {
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #40404c;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-family: 'Muli', sans-serif;
+    text-indent: -28px;
+    margin-left: 28px;
+    border: none;
+    padding: 0;
+    }
+    .dis_policies_wrapper .nav-tabs > li:first-child > a {
+    margin-left: 0;
+    text-indent: inherit;
+    }
+    .dis_policies_wrapper .nav-tabs > li > a > i {
+    margin-right: 3px;
+    color: #eb581f;
+    }
+    .dis_policies_wrapper .nav-tabs > li > a:hover, .dis_policies_wrapper .nav-tabs > li > a:focus, .dis_policies_wrapper .nav-tabs > li.active > a, .dis_policies_wrapper .nav-tabs > li.active > a:hover, .dis_policies_wrapper .nav-tabs > li.active > a:focus  {
+    color: #eb581f;
+    background:none;
+    border:none;
+    }
+    .dis_policies_wrapper .au_heading h2 {
+    padding-top: 65px;
+    }    
+    
+    /* policies page css End */

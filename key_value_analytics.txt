@@ -1,0 +1,19 @@
+{"report":
+	{
+		"report_type":"key_value_analytics",
+		"columns":[
+			"hour",
+			"seller_member_id",
+            "key_name",
+            "key_name_label",
+			"key_value",
+            "key_value_label",
+			"imps",
+			"clicks",
+			"revenue",
+			"ctr"
+		],
+		"report_interval":"last_48_hours",
+		"format":"csv"
+	}
+}

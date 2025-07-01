@@ -1,0 +1,322 @@
+// Hiding previous choose account process
+.dis_signup_wrapper .dis_signup_div .dis_signup_inner .dis_choose_account {
+	display: none;
+}
+
+::-webkit-input-placeholder {
+	/* Edge */
+	color: rgba(158, 158, 158, 1);
+}
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: rgba(158, 158, 158, 1);
+}
+::placeholder {
+	color: rgba(158, 158, 158, 1);
+}
+.gam-back-light-grey {
+	background: $lightGrey;
+}
+.gam-back-grey {
+	background: $grey;
+}
+.gam-light-grey {
+	color: $lightGrey;
+}
+.gam-grey {
+	color: $grey;
+}
+.gam-green {
+	color: $green;
+}
+.gam-bg-green {
+	background: $green;
+}
+.underline {
+	text-decoration: underline;
+}
+.side-pads {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.vert-pads {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+[type='radio']:checked,
+[type='radio']:not(:checked) {
+	// position: relative;
+	// display: block;
+}
+.gam-modal-title {
+	font-size: 24px;
+	font-weight: 700;
+	color: #40404c;
+	margin: 0 0 12px;
+}
+.gam-modal-des {
+	font-size: 16px;
+	font-weight: 500;
+	color: #9e9e9e;
+}
+.gam-common-modal .modal-content {
+	border-radius: 10px;
+}
+.gam-modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 20px;
+	height: 20px;
+	opacity: 1;
+	background: #d9d9d9;
+	border: 0;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-weight: 300;
+	padding: 0;
+	outline: 0 !important;
+}
+.gam-modal-close .gam-modal-close {
+	display: flex;
+}
+.gam-common-modal .modal-body {
+	border-radius: 10px;
+}
+.gam-buttons-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 -5px;
+	.gam_btn {
+		margin: 2px 5px;
+	}
+}
+.gam_btn {
+    &.back{
+        background: #40404c;
+    }
+    background: #EB581F;
+    border-radius: 5px;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    height: 50px;
+    outline: 0!important;
+    border: 0!important;
+    text-transform: capitalize;
+    .gam-btn-back-icon{
+        margin-right: 9px;
+    }
+    &:hover, &:focus, &:active:hover{
+        background: #EB581F;
+        color: #fff;
+    }
+    .gam-btn-back-icon {
+        margin-right: 9px;
+    }
+    .gam-btn-next-icon {
+        margin-left: 9px;
+    }
+    
+}
+.mw {
+	max-width: max-content;
+}
+.btn_lr_20 {
+	padding: 0 20px;
+}
+.btn_lr_30 {
+	padding: 0 30px;
+}
+.btn_p_20 {
+	padding: 0 20px;
+}
+.btn_p_30 {
+	padding: 0 30px;
+}
+.gam-remove-img-btn {
+	border: 0;
+	background: #ff0000;
+	color: #fff;
+	border-radius: 7px;
+	font-weight: 500;
+	font-size: 14px;
+}
+.css-3w2yfm-ValueContainer {
+	height: 48px;
+	overflow: auto;
+}
+// custom calender start
+.react-datepicker__day--selected,
+.react-datepicker__day--selected:hover {
+	background: #eb581f;
+}
+.react-datepicker__day--today {
+	color: #eb581f;
+}
+.react-datepicker__day-name {
+	color: #fff;
+}
+.react-datepicker__header {
+	background: #eb581f;
+	border-color: #eb581f;
+}
+.react-datepicker {
+	border-color: #efefef;
+}
+.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-year-read-view--down-arrow,
+.react-datepicker__navigation-icon::before,
+.react-datepicker__navigation:hover *::before {
+	border-color: #fff;
+}
+.react-datepicker__year-read-view--selected-year,
+span.react-datepicker__month-read-view--selected-month,
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+	color: #fff;
+}
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected,
+.react-datepicker__day--keyboard-selected:hover {
+	background: #eb581f;
+	color: white;
+}
+.react-datepicker-popper[data-placement^='bottom']
+	.react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^='bottom']
+	.react-datepicker__triangle::after {
+	border-bottom-color: #eb581f;
+	left: -20px;
+}
+.react-datepicker__year-read-view:hover
+	.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__year-read-view:hover
+	.react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-read-view:hover
+	.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view:hover
+	.react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-year-read-view:hover
+	.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-year-read-view:hover
+	.react-datepicker__month-read-view--down-arrow {
+	border-top-color: #ffffff;
+}
+.react-datepicker__year-dropdown,
+.react-datepicker__month-dropdown,
+.react-datepicker__month-year-dropdown {
+	background: #fafafa;
+	border-color: #ededed;
+}
+.react-datepicker__year-option:hover,
+.react-datepicker__month-option:hover,
+.react-datepicker__month-year-option:hover {
+	background: #ededed;
+}
+
+.gam-img-white-border {
+	max-width: 60px;
+}
+
+// custom calender end
+// Dark theme start
+.theme_dark .gam-wc-header .gam-countdown span, .theme_dark .gam-collection .gam-tab-buttons button{
+	color: rgb(156 156 156);
+}
+.theme_dark .gam-title{
+    color: #ffffff!important;
+}
+.theme_dark .gam-description, .gam-help-note  {
+    color: var(--text_color)!important;
+}
+.theme_dark .gam-sign-up-modal .modal-content button.close {
+    background: #2c363c;
+}
+.theme_dark .gam-sign-up-modal div[role=group] label.gam-check-rect .gam-interest-mode-box, .theme_dark .gam-sign-up-modal .gam-profile-url-wrap .gam-pop-wrapper{
+	background: transparent;
+	border-color: var(--border_color);
+}
+.theme_dark .gam-sign-up-modal div[role=group] label.gam-check-rect input[type=checkbox]:checked ~ .gam-interest-mode-box {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+.theme_dark .gam-sign-up-modal .gam-custom-file-input .gam-sign-upload-box, .theme_dark .gam-filed {
+    background: transparent;
+    border-color: var(--border_color);
+}
+.theme_dark .gam-sign-up-modal div[role=group] .gam-top-instructions {
+    background: var(--main_bg_color);
+    border-color: 1px solid var(--border_color);
+}
+.theme_dark .gam-sign-up-modal div[role=group] label.gam-check-classic .gam-instructions-text, .theme_dark .gam-select__indicator, .theme_dark .gam-sign-up-modal .modal-body .gam-form-header, .theme_dark .gam-modal-des, .theme_dark .gam-select__input{
+    color: var(--text_color)!important;
+}
+.theme_dark .gam-field-label, .theme_dark .gam-collection .gam-featured-list a p, .theme_dark .gam-badge-modal-content .gam-badge-stats-text, .theme_dark .gam-select__multi-value__label, .theme_dark .gam-sign-up-modal .gam-profile-url-wrap .gam-profile-url-input{
+    color: var(--text_color);
+}
+.theme_dark .gam-weekly-challenge-content, .theme_dark .gam-collection .user-collection-area, .theme_dark .gam-collection .gam-listing-content{
+	background: var(--sec_bg_color);
+}
+.theme_dark .gam-wc-header::after {
+    background: var(--border_color);
+}
+.theme_dark .gam-wc-listing .gam-list-item, .theme_dark .gam-bg-badge-box, .theme_dark .gam-badge-modal-content .gam-modal-single-badge, .theme_dark .gam-sign-up-modal .gam-profile-url-wrap label, .theme_dark .gam-tutorial-container {
+    background: var(--main_bg_color);
+} 
+.theme_dark .gam-tutorial-container:after{
+	border-left-color: var(--main_bg_color);
+	border-right-color: var(--main_bg_color);
+}
+.theme_dark .gam-tutorial-container.gam-left-pos:after{
+	border-left-color: var(--main_bg_color);
+	border-top-color: var(--main_bg_color);
+}
+.theme_dark .gam-wc-header .gam-countdown span{
+    background: var(--gray_bg_color);
+    color: var(--white_color);
+}
+.theme_dark .gam-wc-listing .gam-wc-name span, .theme_dark .gam-wl-title, .theme_dark .gam-collection .gam-listing-header .gam-listing-title, .theme_dark .gam-badge-progress-text, .theme_dark .gam-badge-modal-content .gam-badge-text, .theme_dark .gam-modal-title, .theme_dark .gam-poll-modal .gam-poll-choice-wrap .gam-poll-choice-name, .theme_dark .gam-s-cb-list li p{
+	color:#FFF;
+}
+.theme_dark .gam-collection .gam-listing-header, .theme_dark .gam-sign-up-modal .gam-profile-url-wrap label{
+	border-color: var(--border_color);
+}
+.theme_dark .gam-modal-close, .theme_dark .gam-select__multi-value {
+    background: var(--gray_bg_color);
+}
+.theme_dark .gam-wc-header .gam-countdown span, .theme_dark .gam-collection .gam-tab-buttons button, .theme_dark .gam-select__menu{
+    background: var(--gray_bg_color);
+}
+.theme_dark .gam-select__option.gam-select__option--is-selected {
+    background: #eb581f;
+}
+// Responsive css start
+@media (max-width: 767px){
+    .side-pads {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 575px){
+    .gam-title {
+        font-size: 18px!important;
+    }
+	.gam-leaderboard-modal-content .gam-title {
+		font-size: 47px !important;
+	}
+	
+    
+}

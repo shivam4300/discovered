@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('arial'), local('arial'), url(../fonts/arial.woff2) format('woff2');
+  src: url('../fonts/arial.eot') format('embedded-opentype'), url('../fonts/arial.woff') format('woff'), url('../fonts/arial.ttf') format('truetype'), url('../fonts/arial.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: local('HelveticaNeue'), local('HelveticaNeue'), url(../fonts/HelveticaNeue.woff2) format('woff2');
+  src: url('../fonts/HelveticaNeue.eot') format('embedded-opentype'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype'), url('../fonts/HelveticaNeue.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Circular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ufonts.com_circular'), local('ufonts.com_circular'), url(../fonts/ufonts.com_circular.woff2) format('woff2');
+  src: url('../fonts/ufonts.com_circular.eot') format('embedded-opentype'), url('../fonts/ufonts.com_circular.woff') format('woff'), url('../fonts/ufonts.com_circular.ttf') format('truetype'), url('../fonts/ufonts.com_circular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Helvetica'), local('Helvetica'), url(../fonts/Helvetica.woff2) format('woff2');
+  src: url('../fonts/Helvetica.eot') format('embedded-opentype'), url('../fonts/Helvetica.woff') format('woff'), url('../fonts/Helvetica.ttf') format('truetype'), url('../fonts/Helvetica.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ufonts.com_sansserif-bold'), local('ufonts.com_sansserif-bold'), url(../fonts/ufonts.com_sansserif-bold.woff2) format('woff2');
+  src: url('../fonts/ufonts.com_sansserif-bold.eot') format('embedded-opentype'), url('../fonts/ufonts.com_sansserif-bold.woff') format('woff'), url('../fonts/ufonts.com_sansserif-bold.ttf') format('truetype'), url('../fonts/ufonts.com_sansserif-bold.svg#svgFontName') format('svg');
+}
+

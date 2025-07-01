@@ -1,0 +1,442 @@
+.gam-focus-overlay {
+	transition: all 0.3s ease-in;
+	&.gam-show-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 9999;
+		// pointer-events: none;
+	}
+}
+
+.gam-custom-modal {
+	position: fixed;
+	max-width: 500px;
+	width: 100%;
+	background-color: #fff !important;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	pointer-events: none;
+	text-align: center;
+	padding: 40px;
+	border-radius: 5px;
+	visibility: hidden;
+	transition: all 0.3s ease-in;
+	&.gam-show-modal {
+		z-index: 10000;
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		display: block;
+	}
+	&.gam-align-left {
+		* {
+			text-align: left;
+		}
+	}
+}
+
+#gam-focus-index {
+	&.gam-show-focus {
+		z-index: 10000;
+
+		.gam-focus-element {
+			background-color: #fff !important;
+			padding: 14px 18px;
+			border-radius: 5px;
+			a {
+				padding: 0 0 5px;
+			}
+		}
+	}
+}
+
+.gam-focus-element {
+	transition: background-color 0.3s ease-in;
+
+	&.gam-show-focus {
+		position: relative;
+		z-index: 10000;
+		transition: background-color 0.3s ease-in;
+		background-color: #fff !important;
+	}
+}
+
+.gam-transparent-overlay {
+	opacity: 0 !important;
+}
+
+.gam-centered-modal {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.gam-tutorial-modal {
+	text-align: center;
+	.modal-dialog {
+		max-width: 500px;
+		width: 98%;
+	}
+	.modal-body {
+		padding: 50px 20px;
+	}
+	&.gam-tut-all-set {
+		.gam-title {
+			margin: 28px 0 17px;
+		}
+	}
+}
+
+.gam-tutorial-creators {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 13px;
+	grid-row-gap: 20px;
+	li {
+		width: 70px;
+		height: 70px;
+		margin: auto;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+}
+.tuto-2 {
+	.gam-modal-des {
+		margin: 18px 0 38px;
+	}
+	.gam-tutorial-btn {
+		margin-top: 40px;
+	}
+}
+
+.gam-tutorial-container {
+	position: absolute;
+	background-color: #fff;
+	pointer-events: none;
+	padding: 20px;
+	width: 510px;
+	opacity: 0;
+	display:none;
+	top: 0;
+	text-align: left;
+	visibility: hidden;
+	transform: translate(0, -25%);
+	transition: all 0.3s ease-in;
+	z-index: 10000;
+	border-radius: 0px 10px 10px 10px;
+	@media (max-width: 930px) {
+		border-radius: 10px;
+	}
+	&.gam-creator-tuto {
+		@media (max-width: 1100px) {
+			width: 320px;
+		}
+		@media (max-width: 930px) {
+			max-width: 515px;
+			width: 100%;
+			right: unset !important;
+			top: 25%;
+		}
+		&.gam-left-pos {
+			@media (max-width: 930px) {
+				border-radius: 10px;
+			}
+		}
+	}
+	&.gam-fan-tuto {
+		&.gam-tutorial-box-one {
+			@media (max-width: 930px) {
+				width: 320px;
+				top: calc(100% + 20px);
+				left: 0 !important;
+			}
+			@media (max-width: 575px) {
+				top: 100%;
+			}
+			@media (max-width: 420px) {
+				top: calc(100% - 30px);
+			}
+		}
+		&.gam-tutorial-box-two {
+			left: calc(100% + 12px);
+			@media (max-width: 1580px) {
+				width: 400px;
+			}
+			@media (max-width: 1200px) {
+				width: 100%;
+				top: unset;
+				bottom: calc(100% + 20px);
+				left: 0 !important;
+				border-radius: 10px;
+				&::after {
+					border: none;
+				}
+			}
+		}
+		&.gam-tutorial-box-three {
+			@media (max-width: 1200px) {
+				width: 100%;
+				top: unset;
+				right: unset !important;
+				bottom: calc(100% + 20px);
+				left: 0 !important;
+				border-radius: 10px;
+				&::after {
+					border: none;
+				}
+			}
+		}
+		&.gam-tutorial-box-four {
+			@media (max-width: 1200px) {
+				width: 100%;
+				top: unset !important;
+				right: unset !important;
+				bottom: calc(100% + 20px);
+				left: 0 !important;
+				border-radius: 10px;
+				height: 210px;
+				&::after {
+					border: none;
+				}
+			}
+			@media (max-width: 470px) {
+				height: 240px;
+			}
+		}
+	}
+	&.gam-custom-fade-in {
+		pointer-events: auto;
+		opacity: 1;
+		visibility: visible;
+		transform: translate(0, 0);
+		display: block;
+	}
+	&.gam-left-pos {
+		border-radius: 10px 0px 10px 10px;
+		&:after {
+			border-left: 3px solid #ffffff;
+			border-right: 3px solid transparent;
+			right: -6px;
+			left: auto;
+			@media (max-width: 930px) {
+				border: none;
+			}
+		}
+		&.gam-pad-top {
+			top: 30px;
+		}
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: -6px;
+		border-left: 3px solid #ff000000;
+		border-right: 3px solid white;
+		border-top: 3px solid #ffffff;
+		border-bottom: 3px solid #ff000000;
+		@media (max-width: 930px) {
+			border: none;
+		}
+	}
+	.gam-modal-des {
+		margin: 22px 0 25px;
+	}
+}
+
+.gam-btn-progress-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+
+	.gam-tutorial-btn {
+		margin-top: 0;
+		flex: 0 0 auto;
+	}
+
+	.gam-tutorial-progress-bar {
+		flex: 0 1 50%;
+		display: flex;
+		align-items: center;
+	}
+	.gam_btn {
+		display: flex;
+		align-items: center;
+	}
+	.gam-btn-next-icon {
+		display: flex;
+	}
+}
+
+.gam-tutorial-block-img {
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+
+	.gam-tuto-img-wrapper {
+		width: 60px;
+		height: 60px;
+		border: 2px solid #fff;
+		position: relative;
+		margin: 0px -7px;
+		border-radius: 50%;
+		overflow: hidden;
+		&:nth-child(1) {
+			z-index: 4;
+		}
+		&:nth-child(2) {
+			z-index: 3;
+		}
+		&:nth-child(3) {
+			z-index: 2;
+		}
+		&:nth-child(4) {
+			z-index: 1;
+		}
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.gam-tuto-complete-icon {
+	img {
+		max-width: 100px;
+		width: 100%;
+		height: auto;
+	}
+}
+.gam-tuto-modal-content {
+}
+.gam-tutorial-title{
+    margin-bottom: 10px;
+}
+.gam-tutorial-btn {
+	margin-top: 20px;
+}
+
+.gam-custom-fade-in {
+	animation: fade-in 0.3s ease-in !important;
+}
+
+@keyframes fade-in {
+	from {
+		transform: translate(0, -25%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+@media (max-width: 1499px){
+	.gam-tutorial-container .gam-title {
+		font-size: 20px;
+	}
+	.gam-tutorial-container .gam-modal-des {
+		margin: 5px 0 0px;
+		font-size: 14px;
+	}
+	.gam-tutorial-container .gam_btn {
+		font-size: 12px;
+		height: inherit;
+		padding: 10px;
+	}
+	.gam-tutorial-container.gam-tutorial-box-two{
+		width: 370px;
+	}
+	.gam-btn-progress-row {
+		margin-top: 10px;
+	}
+}
+@media (max-width: 1199px){
+	.gam-tutorial-container.gam-tutorial-box-one.gam-left-pos {
+		max-width: 330px;
+		width: 100%;
+	}
+	.gam-tutorial-container.gam-tutorial-box-two{
+		left: auto!important;
+		top: -180px !important;
+		right: 0 !important;
+		border-radius: 10px;
+	}
+	.gam-tutorial-container.gam-tutorial-box-two:after, .gam-tutorial-container.gam-tutorial-box-three:after, .gam-tutorial-container.gam-tutorial-box-four:after {
+		display: none;
+	}
+	.gam-tutorial-container.gam-tutorial-box-three, .gam-tutorial-container.gam-tutorial-box-four {
+		right: 0!important;
+		top: -170px!important;
+	}
+	.gam-tutorial-container.gam-tutorial-box-three.gam-left-pos, .gam-tutorial-container.gam-tutorial-box-four.gam-left-pos {
+		border-radius: 10px ;
+	}
+}
+@media (max-width: 991px){
+	.gam-tutorial-container.gam-tutorial-box-one.gam-left-pos {
+		right: 10px!important;
+		top: 280px;
+	}
+}
+@media (max-width: 767px){
+	.gam-tutorial-container .gam-title {
+		font-size: 18px;
+	}
+	.gam-tutorial-container .gam-modal-des {
+		margin: 5px 0 0px;
+	}
+	.gam-btn-progress-row {
+		margin-top: 10px;
+	}
+	.gam-tutorial-container {
+		padding: 10px;
+		width: 280px;
+	}
+	.gam-tutorial-container .gam_btn {
+		font-size: 14px;
+		padding: 10px;
+		height: inherit;
+	}
+	
+}
+@media (max-width: 575px){
+	.gam-tutorial-creators li {
+		width: 50px;
+		height: 50px;
+	}
+	.gam-tutorial-container.gam-tutorial-box-one{
+		left: auto!important;
+		top: 70px !important;
+		right: 0 !important;
+	}
+}
+@media (max-width: 420px){
+	.gam-tutorial-container.gam-tutorial-box-two {
+		width: 290px;
+	}
+	.gam-tutorial-modal .modal-body {
+		padding: 20px 15px;
+	}
+	
+	
+	
+}
+@media (max-width: 375px) {
+	.gam-tutorial-creators {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

@@ -1,0 +1,6 @@
+{
+    "auth": {
+        "username" : "adops@discovered.tv",
+        "password" : "Discovered@123"
+    }
+}

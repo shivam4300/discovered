@@ -1,0 +1,144 @@
+#gam-profile-points-root {
+	width: 100%;
+
+	.gam-profile-fans-points {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 20px;
+		margin-top: 20px;
+
+		.gam-profile-points {
+			margin: 0 auto;
+			.gam-profile-points-icon {
+				img {
+					width: inherit;
+					height: inherit;
+				}
+			}
+		}
+	}
+}
+.gam-poll-modal {
+	.modal-dialog {
+		width: 90%;
+		max-width: 500px;
+	}
+	.modal-body {
+		padding: 50px 10px;
+	}
+	.gam-profile-points {
+		padding: 15px 35px;
+		max-width: max-content;
+		margin: 25px auto 35px;
+	}
+	.modal-dialog {
+		text-align: center;
+	}
+	.gam_btn {
+		max-width: max-content;
+		padding: 0 25px;
+	}
+	.gam-modal-title {
+		margin: 20px 0 18px;
+	}
+	.gam-poll-choice-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 40px 0 20px;
+		.gam-poll-choice-label {
+			.gam-poll-choice-input {
+				display: none;
+				&:checked + .gam-pcl-box {
+					background: #fdf4f1;
+					border-color: #eb581f;
+				}
+				&:checked > p {
+					color: #eb581f;
+				}
+			}
+			.gam-pcl-box {
+				background: #fafafa;
+				width: 103px;
+				height: 100px;
+				border: 1px solid #d9d9d9;
+				border-radius: 8px;
+				margin: 5px 26px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: all .3s;
+				cursor: pointer;
+
+				img {
+					width: 70px;
+					height: auto;
+					object-fit: contain;
+				}
+			}
+		}
+		.gam-poll-choice-name {
+			font-size: 16px;
+			font-weight: 600;
+			color: #9e9e9e;
+		}
+	}
+}
+
+.gam-poll-choice-label > input:checked + .gam-pcl-box {
+}
+
+.gam-profile-points {
+	// background: linear-gradient(
+	// 		0deg,
+	// 		rgba(253, 89, 0, 0.08) -0.02%,
+	// 		rgba(255, 222, 0, 0.08) 100.02%
+	// 	),
+	// 	linear-gradient(0deg, rgba(255, 124, 2, 0.05), rgba(255, 124, 2, 0.05));
+	// border: 1px solid rgb(255 124 2 / 5%);
+	// box-shadow: 0px 10px 15px 0px #fe690105;
+	padding: 6px 13px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	background: linear-gradient(0deg, #FDF4F1, #FDF4F1), linear-gradient(0deg, #FAD6C7, #FAD6C7);
+    border: 1px solid #FAD6C7;
+
+	.gam-profile-points-text {
+		font-size: 15px;
+		font-weight: 700;
+		// background: linear-gradient(360deg, #fe6401 22.92%, #ff9901 83.33%);
+		// background: -webkit-linear-gradient(360deg, #fe6401 22.92%, #ff9901 83.33%);
+		// -webkit-background-clip: text;
+		// -webkit-text-fill-color: transparent;
+		// display: flex;
+		color: #EB581F!important;
+	}
+	.gam-profile-points-icon {
+		display: flex;
+		margin-right: 4px;
+	}
+}
+.gam-here-point {
+	font-size: 16px;
+	font-weight: 500;
+	color: #9e9e9e;
+
+	span {
+		color: #5c5c5c;
+		font-weight: 700;
+	}
+}
+
+@media (max-width: 767px){
+	.dis_center_modal .modal-dialog {
+		width: 90%!important;
+		max-width: 630px!important;
+	}
+}
+@media (max-width: 420px){
+	.gam-poll-modal .gam-poll-choice-wrap .gam-poll-choice-label .gam-pcl-box {
+		margin: 5px 10px;
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "socketio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.906.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.5.4",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.7",
+    "socket.io": "^2.5.0",
+    "url-metadata": "^2.5.0",
+    "ytdl-core": "^4.7.0"
+  }
+}

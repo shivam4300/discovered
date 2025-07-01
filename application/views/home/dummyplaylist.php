@@ -1,0 +1,626 @@
+<style>
+.dis_playlist_sgl_wrap {
+    padding: 30px 0;
+    font-family: 'Muli';
+}
+.dis_pl_sgl_inner {
+    max-width: 1170px;
+    margin: auto;
+    width: 100%;
+}
+.dis_heading_ttl {
+    font-size: 28px;
+    color: #40404c;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--brandon-font);
+    margin: 0;
+    padding: 0;
+}
+.dis_heading_sttl {
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+    font-family: var(--brandon-font);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+.dis_pl_sgl_inner .dis_heading_ttl {
+    margin-bottom: 12px;
+}
+/* drop dwon */
+.dis_dropdown .dropdown-menu {
+    padding: 10px 0;
+    border-color:rgb(236 236 236);
+}
+.dis_dropdown .dropdown-menu > .dropdown-item > .dis_dd_anchr {
+    display: block;
+    text-transform: capitalize;
+    color: #40404c;
+    padding: 10px 10px;
+    background: inherit;
+    font-weight: 400;
+    display: flex;
+    font-size: 14px;
+}
+.dis_dropdown .dropdown-menu > .dropdown-item > .dis_dd_anchr:hover {
+    background: rgb(234 234 234);
+}
+.dis_dd_icon > svg {
+    width: 18px;
+    height: 18px;
+}
+.dis_dropdown .dis_dd_icon {
+    margin-right: 8px;
+}
+.dis_pl_sgl_topbox {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+}
+.dis_pl_sgl_tb_dttl {
+    font-size: 20px;
+    color: #40404c;
+    font-weight: 600;
+    margin: 0;
+}
+.dis_pl_sgl_tb_dsttl {
+    font-size: 16px;
+    color: #979797;
+    font-weight: 600;
+    margin: 12px 0px 22px 0px;
+}
+.dis_pl_sgl_tb_dlist {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.dis_pl_sgl_tb_dlist > li {
+    padding: 5px 10px;
+}
+.dis_pl_sgl_tb_thumb {
+    width: 255px;
+    height: 170px;
+    object-fit: cover;
+    position: relative;
+    margin-right: 30px;
+}
+.dis_pl_sgl_tb_thumb > img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.dis_pl_sgl_tb_thumb .play_cover_video {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dis_pl_sgl_tb_thumb .play_cover_video > img {
+    width: 50px;
+}
+.dis_pl_sgl_tb_dlist .select2-selection.select2-selection--single {
+    width: 224px;
+}
+.dis_pl_sgl_tb_dlist .dis_btn {
+    border-radius: 5px;
+    min-width: inherit;
+    padding: 0 30px;
+}
+.dis_pl_sgl_tb_dlist .dis_btn > span {
+    padding-right: 8px;
+}
+.dis_pl_sgl_tb_dlist .dis_btn:hover > span > svg path {
+    fill: #eb581f;
+    transition: all 0.3s;
+}
+.dis_pl_sgl_tb_left {
+    width: 255px;
+    margin-right: 30px;
+}
+.dis_pl_sgl_tb_right {
+    position: relative;
+    width: calc(100% - 285px);
+}
+.dis_pl_sgl_tb_option {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.dis_pl_sgl_secndbox {
+    display: flex;
+    margin: -7px;
+}
+.dis_pl_sgl_secndbox > div {
+    padding: 7px;
+}
+.dis_pl_sgl_sb_left {
+    width: 40%;
+}
+.dis_pl_sgl_sb_right {
+    width: 60%;
+}
+.dis_pl_sgl_vbox {
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(238, 238, 238);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dis_pl_sgl_vb_left {
+    display: flex;
+}
+.dis_pl_sgl_vb_thumb {
+    padding: 0 30px;
+}
+.dis_pl_sgl_vb_thumb img {
+    width: 110px;
+}
+.dis_pl_sgl_vb_drag{
+    align-self: center;
+    cursor: pointer;
+}
+.dis_pl_sgl_plist > li {
+    margin-bottom: -5px;
+}
+.dis_pl_sgl_vb_remove_icon {
+    display: inline-flex;
+    border-radius: 50%;
+    background: rgb(237, 237, 237);
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.dis_pl_sgl_vb_remove_icon:after, .dis_pl_sgl_vb_remove_icon:before {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 2px;
+    background: rgb(145, 145, 145);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.dis_pl_sgl_vb_remove_icon:after {
+    transform: rotate(45deg);
+}
+.dis_pl_sgl_vb_remove_icon:before {
+    transform: rotate(-45deg);
+}
+/* search box */
+.dis_pl_sgl_sb_searchBox {
+    background: rgb(255, 255, 255);
+}
+.dis_pl_sgl_sb_search {
+    position: relative;
+}
+.dis_pl_sgl_sb_search > input[type="search"] {
+    border: 0;
+    padding: 20px 35px 20px 20px;
+    width: 100%;
+    outline: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+.dis_pl_sgl_sb_search > input[type="search"]:focus {
+    border-color: #eb581f;
+}
+.dis_pl_sgl_sb_searchIcon {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dis_plsglsbsrll_thumb > img {
+    width: 108px;
+}
+.dis_plsglsbsrlist_box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.dis_plsglsbsrll_addplay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+.dis_plsglsbsrlist_box:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgb(255 255 255 / 52%);
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.dis_plsglsbsrlist_box:hover:after {
+    opacity: 1;
+    visibility: visible;
+}
+.dis_plsglsbsrlist_box:hover .dis_plsglsbsrll_addplay {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.dis_plsglsbsrlist_left .dis_plsglsbsrll_thumb {
+    padding-right: 10px;
+}
+.dis_pl_sgl_sb_sr_list {
+    max-height: 443px;
+    overflow: auto;
+}
+.dis_pl_sgl_sb_sr_list > li {
+    margin: 0 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+.dis_pl_sgl_sb_sr_list > li:last-child {
+    border-bottom: none;
+}
+.dis_plsglsbsrlist_box .dis_pl_sgl_tb_dsttl {
+    margin: 8px 0px 0px 0px;
+}
+.dis_addplaybtn, .dis_addplaybtn:hover, .dis_addplaybtn:focus {
+    background: #eb581f;
+    border: 1px solid #eb581f;
+    color: #fff;
+    border-radius: 5px;
+    padding: 12px 25px;
+}
+.dis_pl_sgl_sb_noresult {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 316px;
+}
+</style>
+<div class="dis_playlist_sgl_wrap">
+    <div class="dis_pl_sgl_inner">
+        <div class="dis_heading_wrap text-center m_b_30">
+            <h2 class="dis_heading_ttl">Playlist</h2>
+            <h2 class="dis_heading_sttl">Create And Manage Your Own Playlist</h2>
+        </div>
+        <div class="dis_pl_sgl_topsec m_b_30">
+            <div class="dis_pl_sgl_topbox">
+                <div class="dis_pl_sgl_tb_left">
+                    <div class="dis_pl_sgl_tb_thumb">
+                        <img src="https://s3-cdn.discovered.tv/aud_373/images/691926750_thumb.jpg" alt="thumb" class="img-reposnive">
+                        <a href="javascript:;" class="play_cover_video"><img src="<?php echo base_url('repo/images/banner_logo1.png');?>"></a>
+                    </div>
+                </div>
+                <div class="dis_pl_sgl_tb_right">
+                    <div class="dis_pl_sgl_tb_dets">
+                        <h2 class="dis_pl_sgl_tb_dttl">Playlist Name Goes Here</h2>
+                        <h3 class="dis_pl_sgl_tb_dsttl">15 Videos - Created On 26 June 2021</h3>
+                        <ul class="dis_pl_sgl_tb_dlist">
+                            <li>
+                                <div class="dis_select2">
+                                    <select class="primay_select" name="primary_type[]"  data-placeholder="Select Privacy" data-target="select2"  data-option="{minimumResultsForSearch:-1, width:'100%'}">
+                                        <option>Select Privacy</option>
+                                        <option>Private</option>
+                                        <option>Public</option>
+                                    </select>
+                                </div>
+
+                            </li>
+                            <li>
+                                <a href="#" class="dis_btn">
+                                    <span>
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="13px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M14.348,4.492 L10.384,0.564 C10.286,0.467 10.170,0.418 10.036,0.418 C9.902,0.418 9.786,0.467 9.688,0.564 C9.590,0.661 9.541,0.776 9.541,0.910 L9.541,2.873 L7.807,2.873 C4.127,2.873 1.869,3.904 1.033,5.965 C0.759,6.650 0.623,7.502 0.623,8.519 C0.623,9.368 0.950,10.522 1.606,11.979 C1.621,12.015 1.648,12.076 1.687,12.163 C1.726,12.250 1.760,12.327 1.791,12.393 C1.822,12.460 1.856,12.516 1.892,12.562 C1.954,12.649 2.026,12.693 2.109,12.693 C2.186,12.693 2.247,12.667 2.291,12.616 C2.335,12.565 2.357,12.501 2.357,12.424 C2.357,12.378 2.350,12.311 2.337,12.221 C2.324,12.131 2.318,12.071 2.318,12.041 C2.292,11.693 2.279,11.378 2.279,11.097 C2.279,10.581 2.324,10.118 2.415,9.709 C2.505,9.299 2.630,8.946 2.790,8.646 C2.950,8.347 3.156,8.089 3.409,7.872 C3.662,7.654 3.934,7.476 4.226,7.338 C4.518,7.200 4.861,7.092 5.256,7.012 C5.650,6.933 6.048,6.878 6.448,6.847 C6.848,6.817 7.301,6.801 7.807,6.801 L9.541,6.801 L9.541,8.765 C9.541,8.898 9.590,9.013 9.688,9.110 C9.786,9.207 9.902,9.256 10.036,9.256 C10.170,9.256 10.286,9.207 10.384,9.110 L14.348,5.183 C14.446,5.085 14.495,4.970 14.495,4.837 C14.495,4.704 14.446,4.589 14.348,4.492 Z"/></svg>
+                                    </span>
+                                    Share
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="dis_btn" data-toggle="modal" data-target="#myModal">
+                                    <span>
+                                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11px" height="13px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M10.267,3.484 C6.894,3.484 4.106,3.484 0.733,3.484 C0.328,3.484 -0.000,3.094 -0.000,2.613 C-0.000,2.132 0.328,1.742 0.733,1.742 L2.933,1.742 L2.933,1.307 C2.933,0.586 3.427,-0.000 4.033,-0.000 L6.967,-0.000 C7.573,-0.000 8.067,0.586 8.067,1.307 L8.067,1.742 L10.267,1.742 C10.672,1.742 11.000,2.132 11.000,2.613 C11.000,3.094 10.672,3.484 10.267,3.484 ZM7.333,1.307 C7.333,1.066 7.169,0.871 6.967,0.871 L4.033,0.871 C3.831,0.871 3.667,1.066 3.667,1.307 L3.667,1.742 L7.333,1.742 L7.333,1.307 ZM9.519,11.902 C9.473,12.517 9.000,13.000 8.442,13.000 L2.558,13.000 C2.000,13.000 1.526,12.517 1.481,11.902 L0.842,4.364 L10.158,4.364 L9.519,11.902 ZM3.697,5.537 C3.684,5.317 3.520,5.148 3.314,5.164 C3.116,5.177 2.965,5.367 2.977,5.587 L3.337,11.029 C3.350,11.240 3.508,11.403 3.697,11.403 C3.907,11.403 4.070,11.207 4.057,10.979 L3.697,5.537 ZM5.860,5.562 C5.860,5.341 5.699,5.163 5.500,5.163 C5.301,5.163 5.139,5.341 5.139,5.562 L5.139,11.004 C5.139,11.224 5.301,11.403 5.500,11.403 C5.699,11.403 5.860,11.224 5.860,11.004 L5.860,5.562 ZM7.686,5.164 C7.490,5.157 7.316,5.317 7.303,5.537 L6.943,10.979 C6.930,11.199 7.081,11.388 7.280,11.402 C7.493,11.413 7.651,11.238 7.662,11.029 L8.023,5.587 C8.035,5.367 7.884,5.177 7.686,5.164 Z"/></svg>
+                                    </span>
+                                    delete playlist
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dis_pl_sgl_tb_option">
+                        <div class="dis_dropdown dropdown">
+                            <span class="dis_pls_vb_option_icon dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17px" height="7px" viewBox="0 0 17 7">
+                                    <path fill-rule="evenodd" fill="rgb(119, 119, 119)" d="M14.875,4.000 C13.701,4.000 12.750,3.104 12.750,2.000 C12.750,0.895 13.701,-0.000 14.875,-0.000 C16.049,-0.000 17.000,0.895 17.000,2.000 C17.000,3.104 16.049,4.000 14.875,4.000 ZM8.500,4.000 C7.326,4.000 6.375,3.104 6.375,2.000 C6.375,0.895 7.326,-0.000 8.500,-0.000 C9.673,-0.000 10.625,0.895 10.625,2.000 C10.625,3.104 9.673,4.000 8.500,4.000 ZM2.125,4.000 C0.951,4.000 -0.000,3.104 -0.000,2.000 C-0.000,0.895 0.951,-0.000 2.125,-0.000 C3.299,-0.000 4.250,0.895 4.250,2.000 C4.250,3.104 3.299,4.000 2.125,4.000 Z"></path>
+                                </svg> 
+                            </span>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li class="dropdown-item" href="#">
+                                    <a href="#" class="dis_dd_anchr">
+                                        <span class="dis_dd_icon">
+                                            <svg viewBox="0 0 14 14" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g id="Rounded" transform="translate(-411.000000, -1487.000000)">
+                                                        <g id="Content" transform="translate(100.000000, 1428.000000)">
+                                                            <g id="-Round-/-Content-/-add" transform="translate(306.000000, 54.000000)">
+                                                                <g transform="translate(0.000000, 0.000000)">
+                                                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                                                    <path d="M18,13 L13,13 L13,18 C13,18.55 12.55,19 12,19 C11.45,19 11,18.55 11,18 L11,13 L6,13 C5.45,13 5,12.55 5,12 C5,11.45 5.45,11 6,11 L11,11 L11,6 C11,5.45 11.45,5 12,5 C12.55,5 13,5.45 13,6 L13,11 L18,11 C18.55,11 19,11.45 19,12 C19,12.55 18.55,13 18,13 Z" id="Icon-Color" fill="rgb(64 64 76)"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>  
+                                        <span class="dis_dd_text">add videos</span>
+                                        
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" href="#">
+                                    <a href="#" class="dis_dd_anchr">
+                                        <span class="dis_dd_icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2C10.4477 2 10 2.44772 10 3V4H14V3C14 2.44772 13.5523 2 13 2H11ZM16 4V3C16 1.34315 14.6569 0 13 0H11C9.34315 0 8 1.34315 8 3V4H3C2.44772 4 2 4.44772 2 5C2 5.55228 2.44772 6 3 6H3.10496L4.80843 21.3313C4.97725 22.8506 6.26144 24 7.79009 24H16.2099C17.7386 24 19.0228 22.8506 19.1916 21.3313L20.895 6H21C21.5523 6 22 5.55228 22 5C22 4.44772 21.5523 4 21 4H16ZM18.8827 6H5.11726L6.7962 21.1104C6.85247 21.6169 7.28054 22 7.79009 22H16.2099C16.7195 22 17.1475 21.6169 17.2038 21.1104L18.8827 6ZM10 9C10.5523 9 11 9.44771 11 10V18C11 18.5523 10.5523 19 10 19C9.44772 19 9 18.5523 9 18V10C9 9.44771 9.44772 9 10 9ZM14 9C14.5523 9 15 9.44771 15 10V18C15 18.5523 14.5523 19 14 19C13.4477 19 13 18.5523 13 18V10C13 9.44771 13.4477 9 14 9Z" fill="rgb(64 64 76)"/>
+                                            </svg>
+                                        </span>  
+                                        <span class="dis_dd_text">delete playlist</span>
+                                        
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" href="#">
+                                    <a href="#" class="dis_dd_anchr">
+                                        <span class="dis_dd_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
+                                        </span>  
+                                        <span class="dis_dd_text">edit</span>
+                                        
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" href="#">
+                                    <a href="#" class="dis_dd_anchr">
+                                        <span class="dis_dd_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                        </span>  
+                                        <span class="dis_dd_text">share</span>
+                                        
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dis_pl_sgl_secndsec">
+            <div class="dis_pl_sgl_secndbox">
+                <div class="dis_pl_sgl_sb_left">
+                    <div class="dis_pl_sgl_sb_search_wrap">
+                        <div class="dis_pl_sgl_sb_searchBox">
+                            <div class="dis_pl_sgl_sb_search">
+                                <input type="search" class="" placeholder="Search Videos To Add In Playlist">
+                                <span class="dis_pl_sgl_sb_searchIcon">
+                                    <img src="<?php echo base_url('repo/images/search.svg');?>" alt="search" class="">
+                                </span>
+                            </div>
+                            <div class="dis_pl_sgl_sb_searchResult">
+                                <ul class="dis_pl_sgl_sb_sr_list">
+                                    <div class="dis_pl_sgl_sb_noresult">
+                                        <div class="no_result_inner">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="144px" height="141px" class="no_resultsvg">
+                                            <path class="a" fill-rule="evenodd" fill="rgb(232, 233, 234)" d="M102.927,67.238 C102.868,85.522 87.999,100.297 69.715,100.239 C51.430,100.180 36.656,85.311 36.714,67.027 C36.773,48.742 51.642,33.968 69.926,34.026 C88.210,34.085 102.985,48.954 102.927,67.238 Z"></path>
+                                            <path class="b" fill-rule="evenodd" fill="rgb(189, 194, 203)" d="M142.570,51.942 L139.426,51.942 L139.426,55.084 C139.426,55.647 138.969,56.103 138.406,56.103 C137.843,56.103 137.387,55.647 137.387,55.084 L137.387,51.942 L134.243,51.942 C133.681,51.942 133.224,51.485 133.224,50.923 C133.224,50.360 133.681,49.904 134.243,49.904 L137.387,49.904 L137.387,46.761 C137.387,46.198 137.843,45.742 138.406,45.742 C138.969,45.742 139.426,46.198 139.426,46.761 L139.426,49.904 L142.570,49.904 C143.133,49.904 143.589,50.360 143.589,50.923 C143.589,51.485 143.133,51.942 142.570,51.942 ZM104.580,90.518 L136.892,123.739 C138.772,125.671 139.787,128.219 139.749,130.915 C139.711,133.611 138.624,136.130 136.689,138.009 C134.756,139.888 132.206,140.902 129.510,140.864 C126.815,140.825 124.295,139.740 122.414,137.806 L98.385,113.101 C98.384,113.100 98.382,113.098 98.381,113.097 L89.621,104.090 C84.913,106.619 79.742,108.234 74.339,108.822 C73.530,108.910 72.711,108.975 71.904,109.017 C61.657,109.542 51.580,106.270 43.533,99.805 C34.789,92.781 29.307,82.790 28.097,71.674 C26.887,60.557 30.091,49.622 37.118,40.882 C44.146,32.143 54.142,26.664 65.264,25.454 C76.387,24.245 87.326,27.447 96.070,34.471 C104.814,41.496 110.296,51.486 111.506,62.603 C112.400,70.815 110.871,79.021 107.084,86.332 C106.309,87.837 105.456,89.237 104.580,90.518 ZM126.034,134.289 C126.975,135.256 128.234,135.799 129.582,135.818 C130.929,135.837 132.204,135.330 133.171,134.390 C134.139,133.450 134.682,132.192 134.701,130.844 C134.720,129.497 134.213,128.223 133.273,127.257 L111.177,104.540 L103.939,111.573 L126.034,134.289 ZM100.411,107.945 L107.649,100.912 L101.466,94.555 C98.813,97.625 96.603,99.380 96.565,99.410 C95.738,100.098 94.887,100.750 94.015,101.369 L100.411,107.945 ZM106.621,63.134 C104.499,43.645 87.504,29.164 67.929,30.167 C67.221,30.203 66.504,30.261 65.795,30.338 C55.976,31.405 47.152,36.243 40.947,43.958 C34.743,51.674 31.914,61.328 32.982,71.142 C34.051,80.957 38.891,89.777 46.610,95.979 C54.330,102.181 63.987,105.007 73.808,103.939 C81.616,103.090 88.817,99.855 94.631,94.585 L94.665,94.554 C97.561,91.925 100.015,88.869 101.959,85.472 C105.858,78.663 107.470,70.939 106.621,63.134 ZM77.256,64.907 C76.232,64.904 75.358,64.539 74.636,63.812 C73.914,63.086 73.554,62.211 73.557,61.187 C73.560,60.164 73.926,59.291 74.652,58.569 C75.379,57.848 76.255,57.488 77.279,57.491 C78.303,57.495 79.176,57.860 79.899,58.586 C80.621,59.313 80.980,60.187 80.977,61.211 C80.974,62.235 80.609,63.107 79.882,63.829 C79.155,64.550 78.279,64.910 77.256,64.907 ZM80.400,78.271 C80.554,78.754 80.514,79.223 80.280,79.675 C80.047,80.128 79.689,80.431 79.205,80.584 C78.722,80.737 78.248,80.697 77.785,80.463 C77.322,80.230 77.014,79.862 76.862,79.360 C76.384,77.813 75.494,76.560 74.193,75.600 C72.892,74.640 71.430,74.157 69.807,74.152 C68.184,74.147 66.719,74.620 65.412,75.571 C64.105,76.523 63.207,77.770 62.719,79.315 C62.563,79.816 62.257,80.182 61.803,80.412 C61.348,80.643 60.880,80.680 60.397,80.524 C59.895,80.367 59.529,80.062 59.299,79.608 C59.068,79.154 59.031,78.685 59.187,78.203 C59.909,75.868 61.249,73.990 63.204,72.567 C65.161,71.144 67.365,70.437 69.819,70.445 C72.272,70.453 74.474,71.174 76.420,72.610 C78.367,74.045 79.694,75.932 80.400,78.271 ZM62.418,64.860 C61.394,64.856 60.521,64.491 59.798,63.765 C59.076,63.039 58.716,62.164 58.720,61.140 C58.723,60.117 59.088,59.244 59.815,58.522 C60.542,57.800 61.417,57.441 62.441,57.444 C63.465,57.447 64.338,57.812 65.060,58.539 C65.783,59.265 66.142,60.140 66.139,61.164 C66.136,62.187 65.771,63.060 65.044,63.782 C64.317,64.503 63.441,64.863 62.418,64.860 ZM87.267,12.903 C83.760,12.903 80.899,10.043 80.899,6.538 C80.899,3.026 83.760,0.173 87.267,0.173 C90.781,0.173 93.636,3.026 93.636,6.538 C93.636,10.043 90.781,12.903 87.267,12.903 ZM87.267,2.211 C84.882,2.211 82.938,4.154 82.938,6.538 C82.938,8.922 84.882,10.865 87.267,10.865 C89.653,10.865 91.597,8.922 91.597,6.538 C91.597,4.154 89.653,2.211 87.267,2.211 ZM29.003,17.857 L31.183,20.122 C31.573,20.527 31.561,21.172 31.155,21.562 C30.750,21.953 30.104,21.940 29.714,21.535 L27.534,19.270 L25.268,21.449 C24.863,21.839 24.217,21.827 23.827,21.421 C23.437,21.016 23.449,20.371 23.855,19.981 L26.120,17.802 L23.941,15.538 C23.550,15.132 23.563,14.487 23.968,14.097 C24.374,13.707 25.020,13.719 25.410,14.125 L27.589,16.389 L29.855,14.210 C30.261,13.819 30.906,13.832 31.296,14.237 C31.687,14.643 31.675,15.288 31.269,15.678 L29.003,17.857 ZM25.581,113.255 C25.676,112.700 26.202,112.327 26.758,112.421 C27.312,112.516 27.686,113.043 27.591,113.597 L27.063,116.694 L30.162,117.222 C30.717,117.318 31.090,117.844 30.996,118.398 C30.901,118.953 30.375,119.326 29.820,119.232 L26.720,118.704 L26.192,121.801 C26.097,122.356 25.571,122.729 25.015,122.634 C24.824,122.601 24.653,122.517 24.517,122.397 C24.258,122.172 24.120,121.821 24.182,121.459 L24.710,118.361 L21.611,117.833 C21.419,117.800 21.249,117.716 21.112,117.596 C20.854,117.370 20.716,117.020 20.777,116.657 C20.872,116.102 21.398,115.730 21.954,115.824 L25.053,116.352 L25.581,113.255 ZM10.330,73.926 C8.941,74.905 7.257,75.292 5.576,75.005 C4.407,74.804 3.337,74.293 2.467,73.532 C2.089,73.201 1.746,72.829 1.453,72.411 C0.469,71.028 0.086,69.339 0.369,67.664 C0.578,66.466 1.100,65.406 1.847,64.552 C3.261,62.936 5.452,62.072 7.718,62.455 C11.177,63.052 13.517,66.342 12.925,69.805 C12.637,71.475 11.714,72.943 10.330,73.926 ZM7.375,64.466 C5.022,64.070 2.788,65.654 2.381,68.006 C1.980,70.354 3.565,72.597 5.923,72.998 C7.063,73.191 8.207,72.927 9.149,72.262 C10.097,71.592 10.719,70.602 10.913,69.463 C11.314,67.106 9.729,64.872 7.375,64.466 Z"></path>
+                                            </svg>
+                                            <p>Search You Video</p>
+                                            <!-- <p>No Results Found.</p> -->
+                                        </div>
+                                    </div>
+                                    <!-- <li>
+                                        <div class="dis_plsglsbsrlist_box">
+                                            <div class="dis_plsglsbsrlist_left">
+                                                <div class="dis_plsglsbsrll_thumb">
+                                                    <img src="https://s3-cdn.discovered.tv/aud_373/images/691926750_thumb.jpg" alt="thumb" class="img-reposnive">
+                                                </div>
+                                            </div>
+                                            <div class="dis_plsglsbsrll_right">
+                                                <h2 class="dis_pl_sgl_tb_dttl">Video Name Goes Here</h2>
+                                                <h3 class="dis_pl_sgl_tb_dsttl">Music Mode - Uploaded On 26 June 2021</h3>
+                                            </div>
+                                            <div class="dis_plsglsbsrll_addplay">
+                                                <a href="#" class="dis_addplaybtn">
+                                                    <span class="dis_btn_icon">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="13px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)"d="M14.000,10.000 L13.985,13.000 L12.015,13.000 L12.012,10.014 L9.000,10.019 L9.000,8.008 L12.000,8.000 L12.015,4.991 L13.985,4.991 L14.000,8.000 L17.000,8.008 L17.000,10.019 L14.000,10.000 ZM-0.000,3.989 L10.012,3.989 L10.012,5.984 L-0.000,5.984 L-0.000,3.989 ZM-0.000,-0.000 L10.012,-0.000 L10.012,1.994 L-0.000,1.994 L-0.000,-0.000 ZM6.987,10.010 L-0.000,10.010 L-0.000,8.015 L6.987,8.015 L6.987,10.010 Z"/></svg>
+                                                    </span>
+                                                    Add To Playlist
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="dis_plsglsbsrlist_box">
+                                            <div class="dis_plsglsbsrlist_left">
+                                                <div class="dis_plsglsbsrll_thumb">
+                                                    <img src="https://s3-cdn.discovered.tv/aud_373/images/691926750_thumb.jpg" alt="thumb" class="img-reposnive">
+                                                </div>
+                                            </div>
+                                            <div class="dis_plsglsbsrll_right">
+                                                <h2 class="dis_pl_sgl_tb_dttl">Video Name Goes Here</h2>
+                                                <h3 class="dis_pl_sgl_tb_dsttl">Music Mode - Uploaded On 26 June 2021</h3>
+                                            </div>
+                                            <div class="dis_plsglsbsrll_addplay">
+                                                <a href="#" class="dis_addplaybtn">
+                                                    <span class="dis_btn_icon">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="13px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)"d="M14.000,10.000 L13.985,13.000 L12.015,13.000 L12.012,10.014 L9.000,10.019 L9.000,8.008 L12.000,8.000 L12.015,4.991 L13.985,4.991 L14.000,8.000 L17.000,8.008 L17.000,10.019 L14.000,10.000 ZM-0.000,3.989 L10.012,3.989 L10.012,5.984 L-0.000,5.984 L-0.000,3.989 ZM-0.000,-0.000 L10.012,-0.000 L10.012,1.994 L-0.000,1.994 L-0.000,-0.000 ZM6.987,10.010 L-0.000,10.010 L-0.000,8.015 L6.987,8.015 L6.987,10.010 Z"/></svg>
+                                                    </span>
+                                                    Add To Playlist
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>   -->
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dis_pl_sgl_sb_right">
+                    <ul class="dis_pl_sgl_plist">
+                        <li>
+                            <div class="dis_pl_sgl_vbox">
+                                <div class="dis_pl_sgl_vb_left">
+                                    <div class="dis_pl_sgl_vb_drag">
+                                        <span class="dis_pl_sgl_vb_drag_icon">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="16px"><path fill-rule="evenodd" fill="rgb(150, 167, 175)" d="M7.743,9.093 C6.917,9.093 6.246,8.422 6.246,7.594 C6.246,6.765 6.917,6.094 7.743,6.094 C8.570,6.094 9.240,6.765 9.240,7.594 C9.240,8.422 8.570,9.093 7.743,9.093 ZM7.743,3.095 C6.917,3.095 6.246,2.424 6.246,1.595 C6.246,0.767 6.917,0.096 7.743,0.096 C8.570,0.096 9.240,0.767 9.240,1.595 C9.240,2.424 8.570,3.095 7.743,3.095 ZM1.757,15.091 C0.930,15.091 0.260,14.420 0.260,13.592 C0.260,12.764 0.930,12.092 1.757,12.092 C2.583,12.092 3.253,12.764 3.253,13.592 C3.253,14.420 2.583,15.091 1.757,15.091 ZM1.757,9.093 C0.930,9.093 0.260,8.422 0.260,7.594 C0.260,6.765 0.930,6.094 1.757,6.094 C2.583,6.094 3.253,6.765 3.253,7.594 C3.253,8.422 2.583,9.093 1.757,9.093 ZM1.757,3.095 C0.930,3.095 0.260,2.424 0.260,1.595 C0.260,0.767 0.930,0.096 1.757,0.096 C2.583,0.096 3.253,0.767 3.253,1.595 C3.253,2.424 2.583,3.095 1.757,3.095 ZM7.743,12.092 C8.570,12.092 9.240,12.764 9.240,13.592 C9.240,14.420 8.570,15.091 7.743,15.091 C6.917,15.091 6.246,14.420 6.246,13.592 C6.246,12.764 6.917,12.092 7.743,12.092 Z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="dis_pl_sgl_vb_thumb">
+                                        <img src="https://s3-cdn.discovered.tv/aud_373/images/691926750_thumb.jpg" alt="thumb" class="img-reposnive">
+                                    </div>
+                                    <div class="dis_pl_sgl_vb_detls">
+                                        <h2 class="dis_pl_sgl_tb_dttl">Video Name Goes Here</h2>
+                                        <h3 class="dis_pl_sgl_tb_dsttl">Music Mode - Uploaded On 26 June 2021</h3>
+                                    </div>
+                                </div>
+                                <div class="dis_pl_sgl_vb_right">
+                                    <span class="dis_pl_sgl_vb_remove_icon"></span>
+                                </div>
+                            </div>
+                        </li> 
+                        <li>
+                            <div class="dis_pl_sgl_vbox">
+                                <div class="dis_pl_sgl_vb_left">
+                                    <div class="dis_pl_sgl_vb_drag">
+                                        <span class="dis_pl_sgl_vb_drag_icon">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="16px"><path fill-rule="evenodd" fill="rgb(150, 167, 175)" d="M7.743,9.093 C6.917,9.093 6.246,8.422 6.246,7.594 C6.246,6.765 6.917,6.094 7.743,6.094 C8.570,6.094 9.240,6.765 9.240,7.594 C9.240,8.422 8.570,9.093 7.743,9.093 ZM7.743,3.095 C6.917,3.095 6.246,2.424 6.246,1.595 C6.246,0.767 6.917,0.096 7.743,0.096 C8.570,0.096 9.240,0.767 9.240,1.595 C9.240,2.424 8.570,3.095 7.743,3.095 ZM1.757,15.091 C0.930,15.091 0.260,14.420 0.260,13.592 C0.260,12.764 0.930,12.092 1.757,12.092 C2.583,12.092 3.253,12.764 3.253,13.592 C3.253,14.420 2.583,15.091 1.757,15.091 ZM1.757,9.093 C0.930,9.093 0.260,8.422 0.260,7.594 C0.260,6.765 0.930,6.094 1.757,6.094 C2.583,6.094 3.253,6.765 3.253,7.594 C3.253,8.422 2.583,9.093 1.757,9.093 ZM1.757,3.095 C0.930,3.095 0.260,2.424 0.260,1.595 C0.260,0.767 0.930,0.096 1.757,0.096 C2.583,0.096 3.253,0.767 3.253,1.595 C3.253,2.424 2.583,3.095 1.757,3.095 ZM7.743,12.092 C8.570,12.092 9.240,12.764 9.240,13.592 C9.240,14.420 8.570,15.091 7.743,15.091 C6.917,15.091 6.246,14.420 6.246,13.592 C6.246,12.764 6.917,12.092 7.743,12.092 Z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="dis_pl_sgl_vb_thumb">
+                                        <img src="https://s3-cdn.discovered.tv/aud_373/images/691926750_thumb.jpg" alt="thumb" class="img-reposnive">
+                                    </div>
+                                    <div class="dis_pl_sgl_vb_detls">
+                                        <h2 class="dis_pl_sgl_tb_dttl">Video Name Goes Here</h2>
+                                        <h3 class="dis_pl_sgl_tb_dsttl">Music Mode - Uploaded On 26 June 2021</h3>
+                                    </div>
+                                </div>
+                                <div class="dis_pl_sgl_vb_right">
+                                    <span class="dis_pl_sgl_vb_remove_icon"></span>
+                                </div>
+                            </div>
+                        </li> 
+                        <li>
+                            <div class="dis_pl_sgl_vbox">
+                                <div class="dis_pl_sgl_vb_left">
+                                    <div class="dis_pl_sgl_vb_drag">
+                                        <span class="dis_pl_sgl_vb_drag_icon">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10px" height="16px"><path fill-rule="evenodd" fill="rgb(150, 167, 175)" d="M7.743,9.093 C6.917,9.093 6.246,8.422 6.246,7.594 C6.246,6.765 6.917,6.094 7.743,6.094 C8.570,6.094 9.240,6.765 9.240,7.594 C9.240,8.422 8.570,9.093 7.743,9.093 ZM7.743,3.095 C6.917,3.095 6.246,2.424 6.246,1.595 C6.246,0.767 6.917,0.096 7.743,0.096 C8.570,0.096 9.240,0.767 9.240,1.595 C9.240,2.424 8.570,3.095 7.743,3.095 ZM1.757,15.091 C0.930,15.091 0.260,14.420 0.260,13.592 C0.260,12.764 0.930,12.092 1.757,12.092 C2.583,12.092 3.253,12.764 3.253,13.592 C3.253,14.420 2.583,15.091 1.757,15.091 ZM1.757,9.093 C0.930,9.093 0.260,8.422 0.260,7.594 C0.260,6.765 0.930,6.094 1.757,6.094 C2.583,6.094 3.253,6.765 3.253,7.594 C3.253,8.422 2.583,9.093 1.757,9.093 ZM1.757,3.095 C0.930,3.095 0.260,2.424 0.260,1.595 C0.260,0.767 0.930,0.096 1.757,0.096 C2.583,0.096 3.253,0.767 3.253,1.595 C3.253,2.424 2.583,3.095 1.757,3.095 ZM7.743,12.092 C8.570,12.092 9.240,12.764 9.240,13.592 C9.240,14.420 8.570,15.091 7.743,15.091 C6.917,15.091 6.246,14.420 6.246,13.592 C6.246,12.764 6.917,12.092 7.743,12.092 Z"/></svg>
+                                        </span>
+                                    </div>
+                                    <div class="dis_pl_sgl_vb_thumb">
+                                        <img src="https://s3-cdn.discovered.tv/aud_373/images/691926750_thumb.jpg" alt="thumb" class="img-reposnive">
+                                    </div>
+                                    <div class="dis_pl_sgl_vb_detls">
+                                        <h2 class="dis_pl_sgl_tb_dttl">Video Name Goes Here</h2>
+                                        <h3 class="dis_pl_sgl_tb_dsttl">Music Mode - Uploaded On 26 June 2021</h3>
+                                    </div>
+                                </div>
+                                <div class="dis_pl_sgl_vb_right">
+                                    <span class="dis_pl_sgl_vb_remove_icon"></span>
+                                </div>
+                            </div>
+                        </li> 
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- video add to playlist popup-->
+<div class="dis_addplaylist_modal dis_center_modal muli_font modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body mp_0">
+				<div class="">
+					<div class="dis_ap_modal_box">
+						<div class="upl_dd_header">
+							<h2 class="upl_dd_head_ttl">Playlist</h2>
+							<h2 class="upl_dd_head_new newpl_click" data-id="NewPlaylist">Create New PlayList</h2>
+						</div>
+						<ul class="upl_dd" id="PlayListArea">
+							<li>
+								<div class="checkbox dis_checkbox">
+									<label>
+										<input type="checkbox" value="21" class="check" name="playlist_ids[]" checked="">
+										<i class="input-helper"></i>
+										<p>test</p>
+									</label>
+									<span class="form-error help-block"></span>
+								</div>
+							</li><li>
+								<div class="checkbox dis_checkbox">
+									<label>
+										<input type="checkbox" value="31" class="check" name="playlist_ids[]">
+										<i class="input-helper"></i>
+										<p>test</p>
+									</label>
+									<span class="form-error help-block"></span>
+								</div>
+							</li>
+						</ul>
+						<div class="upl_dd_middle hideme" id="ShowPlayListForm">
+							<div class="upl_dd_newpl_inner">
+								<div class="upl_dd_pl_filed">
+									<textarea placeholder="Playlist Title" class="upl_dd_pl_inner" id="playlistTitle" maxlength="50"></textarea> 
+								</div>
+								<div class="upl_dd_pl_filed">
+									<select class="upl_dd_pl_inner" id="PlayListStatus">
+										<option value="5">Only Me</option>
+										<option value="6">Private</option>
+										<option selected="selected" value="7">Public</option>																		</select>	
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="upl_dd_footer">
+                        <div class="upl_dd_foot_inner center">
+                            <a href="javascript:;" class="upl_dd_foot_btn" data-toggle="collapse" data-target="#playlistsec" aria-expanded="true">Done</a>
+                        </div>
+                        <div class="upl_dd_foot_inner hideme">
+                            <h2 class="upl_dd_foot_new newpl_click" data-id="CancelPlaylist">Cancel</h2>
+                            <a href="javascript:;" class="upl_dd_foot_btn createNewPlaylist" data-page="singlepage">Create</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="dis_cmn_close" data-dismiss="modal">&times;</button>
+    </div>
+</div>

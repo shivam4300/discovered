@@ -1,0 +1,8 @@
+.gam-group-polls {
+	img {
+		max-width: 150px;
+		@media (max-width: 575px){
+				max-width: 100px;
+			}
+		}
+	}

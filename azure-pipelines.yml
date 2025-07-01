@@ -1,0 +1,43 @@
+trigger:
+  branches:
+    include:
+      - discovered-gamification-as
+  paths:
+    exclude:
+    - .gitlab-ci.yml
+    - azure-pipelines.yml
+    - .gitignore
+
+pool:
+  vmImage: ubuntu-latest
+variables:
+  - group: database-variables
+resources:
+  repositories:
+  - repository: discovered
+    type: bitbucket
+    endpoint: yhpvbm
+    name: aliceandsmith/discovered
+    ref: discovered-gamification-as
+
+steps:
+- checkout: discovered
+- task: qetza.replacetokens.replacetokens-task.replacetokens@5
+  displayName: "Replace tokens in config/production/database.php"
+  inputs:
+    targetFiles: "$(System.DefaultWorkingDirectory)/application/config/production/database.php"
+- script: cd $(System.DefaultWorkingDirectory)/gamification && npm install && npm run build && cd ../ && zip -r myarchive.zip ./ -x ./.git/\* ./.gitlab-ci.yml ./.gitignore
+- task: CopyFilesOverSSH@0
+  displayName: Deploy over ssh into dev'
+  inputs:
+    sshEndpoint: 'ssh-discodev'
+    sourceFolder: '$(System.DefaultWorkingDirectory)'
+    contents: 'myarchive.zip'
+    targetFolder: '/home/discadmin/discovered/'
+    readyTimeout: '20000'
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh-discodev'
+    runOptions: 'inline'
+    inline: 'sudo mv /home/discadmin/discovered/myarchive.zip /var/www/html/ && cd /var/www/html/  && sudo unzip -o myarchive.zip && sudo rm -rf myarchive.zip && sudo chown -R discadmin:www-data ./ && sudo chmod -R 775 application/cache/ && sudo systemctl restart apache2'
+    readyTimeout: '20000'

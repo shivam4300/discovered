@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /home/my-project/public_html-deploy/
+  
+file_exists_behavior: OVERWRITE
+
+permissions:
+  - object: /home/my-project/public_html-deploy
+    owner: my-project 
+    group: my-project
+    mode: 755
+    type:
+      - directory
+  - object: /home/my-project/public_html-deploy
+    owner: my-project
+    group: my-project
+    mode: 644
+    type:
+      - file
+hooks:
+  AfterInstall:
+    - location: /after_install.sh
+      timeout: 1800
+      runas: root

@@ -1,0 +1,44 @@
+.gam-notifications {
+	// height: 300px;
+	// overflow-y: scroll;
+
+	.gam-notification {
+		margin-bottom: 1rem;
+
+		&:last-of-type {
+			margin-bottom: 0rem;
+		}
+
+	}
+
+	.noti_img {
+		// margin-right: 1rem;
+
+		img {
+			// max-width: 50px;
+		}
+	}
+
+
+		.scale {
+			display: flex;
+			align-items: center;
+		}
+
+		.gam-noti-inner {
+			display: flex;
+			align-items: center;
+		}
+
+}
+.gam-no-noti-data{
+	padding: 10px
+}
+.noti_drop .noti_data .noti_wrapper {
+	// display: inherit !important;
+}
+.translate {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

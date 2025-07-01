@@ -1,0 +1,7 @@
+p {
+    line-height: 3; /* Example, this will be overridden by inline styles */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 3; /* Example, this will be overridden by inline styles */
+}
