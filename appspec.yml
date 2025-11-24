@@ -3,20 +3,20 @@ os: linux
 
 files:
   - source: /
-    destination: /home/my-project/public_html-deploy/
+    destination: /home/shivam/public_html-deploy/
   
 file_exists_behavior: OVERWRITE
 
 permissions:
-  - object: /home/my-project/public_html-deploy
-    owner: my-project 
-    group: my-project
+  - object: /home/shivam/public_html-deploy
+    owner: shivam
+    group: shivam
     mode: 755
     type:
       - directory
-  - object: /home/my-project/public_html-deploy
-    owner: my-project
-    group: my-project
+  - object: /home/shivam/public_html-deploy
+    owner: shivam
+    group: shivam
     mode: 644
     type:
       - file
